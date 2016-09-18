@@ -33,43 +33,43 @@ These signals were used to estimate variables of the feature vector for each pat
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
 The conventon for naming these features is shown below:
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
 
 
 ###The set of variables that were estimated from these signals are: 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+- mean(): Mean value
+- std(): Standard deviation
+- mad(): Median absolute deviation 
+- max(): Largest value in array
+- min(): Smallest value in array
+- sma(): Signal magnitude area
+- energy(): Energy measure. Sum of the squares divided by the number of values. 
+- iqr(): Interquartile range 
+- entropy(): Signal entropy
+- arCoeff(): Autorregresion coefficients with Burg order equal to 4
+- correlation(): correlation coefficient between two signals
+- maxInds(): index of the frequency component with largest magnitude
+- meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+- skewness(): skewness of the frequency domain signal 
+- kurtosis(): kurtosis of the frequency domain signal 
+- bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+- angle(): Angle between to vectors.
 
 Note: In this analysis, only mean and std are used.
 
@@ -98,8 +98,8 @@ Note: The Inertail Signals files were not used in this analysis.
 The script run_analysis.R creates the tidy data file. Each line/section of the script is annotated and includes the following steps:
 
 ###Step 1: Read files into R 
-*Load the following files(activity_labels.txt, fetaures.txt, x_test.txt, y_test.txt, subject_test.txt, X_train.txt, y_train.txt, and subject_train.txt). 
-*These are named as the following R objects: activities, features, xtest, ytest, subjectTest, xtrain, ytrain, and SubjectTrain
+* Load the following files(activity_labels.txt, fetaures.txt, x_test.txt, y_test.txt, subject_test.txt, X_train.txt, y_train.txt, and subject_train.txt). 
+* These are named as the following R objects: activities, features, xtest, ytest, subjectTest, xtrain, ytrain, and SubjectTrain
 
 ###Step 2: Clean the data
 a. Clean xtest and limit to features with mean or std. 
@@ -109,7 +109,7 @@ a. Clean xtest and limit to features with mean or std.
 
 b. Add labels called Activity_ID and Activity_Label to ytest.
 
-C. Add Subject as a column name to subjectTest.
+c. Add Subject as a column name to subjectTest.
  
 d. Bind subjectTest, xtest and ytest by column using the cbind function and make a datframe using as.data.frame called test.
 
@@ -135,8 +135,11 @@ e. Repeat these steps for xtrain and ytrain and create a new dataframe called tr
 * Dimensions of the dataset, 180 rows (observations), 81 columns (variables)
 * Summary of the data
 
-$ subject                        : int  1 1 1 1 1 1 2 2 2 2 ...
- $ Activity_Label                 : Factor w/ 6 levels "LAYING","SITTING",..: 1 2 3 4 5 6 1 2 3 4 ...
+$ subject                        : int  There are 30 subjects.
+ 
+$ Activity_Label                 : Factor w/ 6 levels WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING
+
+Variables showing mean for the following features. See "Understanding the Features" above for the naming convention:
  $ tBodyAcc-mean()-X              : num  
  $ tBodyAcc-mean()-Y              : num  
  $ tBodyAcc-mean()-Z              : num  

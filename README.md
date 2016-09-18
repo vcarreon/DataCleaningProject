@@ -9,8 +9,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 #Repo Contents
 This repo includes the following files:
+
 1. README.md 
+
 2. Codebook.md
+
 3. run_analysis.R, which includes the script to create the tidy dataset.
  
 ##Script: run_analysis.R
@@ -30,17 +33,22 @@ The codebook describes the variables, the data, and transformations that were pe
 * Step 1: Read files into R
 
 * Step 2: Clean the data
+
 a. Clean xtest and limit to features with mean or std. 
+
 b. Add labels called Activity_ID and Activity_Label to ytest.
-C. Add Subject as a column name to subjectTest.
+
+c. Add Subject as a column name to subjectTest.
+
 d. Bind subjectTest, xtest and ytest by column using the cbind function and make a datframe using as.data.frame called test.
+
 e. Repeat these steps for xtrain and ytrain and create a new dataframe called train.
 
-*Step 3: Create a preliminary tidy dataset using the melt function
+* Step 3: Create a preliminary tidy dataset using the melt function
 
-*Step 4: Create a tidy dataset (tidyData)that takes the mean of each variable for each activity of each subject
+* Step 4: Create a tidy dataset (tidyData)that takes the mean of each variable for each activity of each subject
 
-*Step 5: Write the file for tidyData in both txt and csv formats
+* Step 5: Write the file for tidyData in both txt and csv formats
 
 
 
