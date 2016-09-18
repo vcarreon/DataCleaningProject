@@ -72,5 +72,5 @@ tidyData=dcast(meltedData,subject+Activity_Label~variable,mean)
 View(tidyData)
 
 #Step 6: Write file to both table and csv formats
-write.table(tidyData,file="./tidy_data.txt")
-write.csv(tidyData,file="./tidy_data.csv")
+write.table(tidyData,file="./tidy_data.txt",row.names = FALSE)
+write.csv(tidyData,file="./tidy_data.csv", row.names= FALSE)
